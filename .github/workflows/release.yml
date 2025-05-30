@@ -80,7 +80,7 @@ jobs:
       - name: Create macOS Universal Binary
         shell: sh
         run: |
-          ls artifacts
+          chmod +x artifacts/dsd-macos-*
           lipo -create -output artifacts/dsd-macos-universal artifacts/dsd-macos-x86_64 artifacts/dsd-macos-arm64
           rm artifacts/dsd-macos-x86_64 artifacts/dsd-macos-arm64
 
